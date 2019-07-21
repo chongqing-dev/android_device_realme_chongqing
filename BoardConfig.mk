@@ -121,5 +121,8 @@ BOARD_USES_METADATA_PARTITION := true
 # Platform
 TARGET_BOARD_PLATFORM := mt6835
 
+# SPL
+VENDOR_SECURITY_PATCH := 2026-04-01
+
 # Inherit the proprietary files
 include vendor/realme/chongqing/BoardConfigVendor.mk
