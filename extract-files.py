@@ -37,6 +37,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/android.hardware.security.keymint@2.0-service.trustonic': blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+    'system_ext/lib64/libsink.so': blob_fixup()
+        .add_needed('libaudioclient_shim.so'),
     'vendor/bin/hw/android.hardware.graphics.composer@3.1-service': blob_fixup()
         .replace_needed('android.hardware.graphics.composer@2.1-resources.so', 'android.hardware.graphics.composer@2.1-resources-v34.so'),
 }  # fmt: skip
