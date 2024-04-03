@@ -11,3 +11,6 @@ vendor.audiohal.telephonytx.type=2
 ro.config.media_vol_default=10
 ro.config.vc_call_vol_default=4
 ro.config.vc_call_vol_steps=12
+
+# DRM
+ro.netflix.bsp_rev=MTK6835-36999-1
