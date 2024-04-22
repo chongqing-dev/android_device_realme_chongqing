@@ -77,7 +77,20 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.mt6835.vendor_ramdisk
+    fstab.mt6835 \
+    fstab.mt6835.vendor_ramdisk \
+    init_connectivity.rc \
+    init.cgroup.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6835.rc \
+    init.mt6835.usb.rc \
+    init.mtkgki.rc \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    ueventd.mt6835.rc \
+    ueventd.oplus.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.mt6835.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6835.rc
