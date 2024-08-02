@@ -1,14 +1,4 @@
-import /system_ext/etc/init/hw/init.usb.rc
-
-on early-init
-
 on post-fs
-#ifndef OPLUS_FEATURE_CHG_BASIC
-# /* BSP.CHG.Basic, 2022/10/18, Modify for OLUS USB VID/PID */
-#   setprop vendor.usb.vid "0x0E8D"
-#else /*OPLUS_FEATURE_CHG_BASIC*/
-    setprop vendor.usb.vid "0x22D9"
-#endif /*!OPLUS_FEATURE_CHG_BASIC*/
     mkdir /dev/usb-ffs 0775 shell shell
     mkdir /dev/usb-ffs/adb 0770 shell shell
     mkdir /config/usb_gadget/g1 0770 shell shell
