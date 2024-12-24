@@ -2635,15 +2635,6 @@ vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libNoFpsActor.so
 
-# Health
-odm/etc/bin/gauge_authenticate
-vendor/bin/fuelgauged
-vendor/etc/init/fuelgauged_init.rc
-vendor/lib/libfgauge_gm30.so
-vendor/lib64/libfgauge_gm30.so
-vendor/bin/fuelgauged_nvram
-vendor/etc/init/fuelgauged_nvram_init.rc
-
 # IMS
 system_ext/bin/vtservice
 system_ext/etc/init/init.vtservice.rc

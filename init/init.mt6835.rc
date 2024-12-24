@@ -94,9 +94,6 @@ on charger
     chmod 0660 /sys/power/wakeup_count
     write /sys/power/pm_freeze_timeout 2000
 
-    start fuelgauged
-    start fuelgauged_nvram
-
     chown system system /sys/class/leds/lcd-backlight/brightness
 
     start vendor.health-default
@@ -1054,17 +1051,3 @@ on property:sys.boot_completed=1
 #ziyu@BSP.Power.Framework, 2023/1/17, add for MIDAS
     chown system system /proc/task_overload/abnormal_task
     chmod 0660 /proc/task_overload/abnormal_task
-
-##ifdef OPLUS_FEATURE_CHG_BASIC
-##/*Use MTK FG */
-service fuelgauged /vendor/bin/fuelgauged
-   class core
-   user system
-   group system
-
-service fuelgauged_nvram /vendor/bin/fuelgauged_nvram
-   class main
-   user system
-   group system
-   oneshot
-##endif
