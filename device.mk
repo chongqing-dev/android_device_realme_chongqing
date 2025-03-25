@@ -92,7 +92,8 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
-    hardware/mediatek
+    hardware/mediatek \
+    hardware/oplus
 
 # USB
 PRODUCT_PACKAGES += \
