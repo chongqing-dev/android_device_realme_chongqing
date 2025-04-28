@@ -414,6 +414,12 @@ vendor/app/mcRegistry/5020170115e016302017012521300000.tlbin
 vendor/app/mcRegistry/abcd270ea5c44c58bcd3384a2fa2539e.tabin
 vendor/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin
 
+# Tether Offload
+vendor/bin/hw/tetheroffloadservice
+vendor/etc/init/tetheroffloadservice.rc
+vendor/lib64/libforkexecwrap.so
+vendor/lib64/libifcutils_mtk.so
+
 # WiFi
 vendor/bin/netdagent
 vendor/bin/wlan_assistant
