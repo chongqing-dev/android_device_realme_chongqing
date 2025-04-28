@@ -181,6 +181,10 @@ vendor/lib64/libbt-vendor.so
 # Bluetooth (Firmware)
 vendor/firmware/BT_FW.cfg
 
+# Connectivity
+vendor/bin/wmt_launcher
+vendor/bin/wmt_loader
+
 # DRM (Widevine)
 vendor/bin/hw/android.hardware.drm-service.widevine
 vendor/etc/init/android.hardware.drm-service.widevine.rc
