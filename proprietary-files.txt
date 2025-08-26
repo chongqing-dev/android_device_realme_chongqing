@@ -1,6 +1,13 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
 ## are from RMX3780 AP3A.240617.008.
 
+# AAL
+vendor/lib64/mt6835/libaal_cust_func.so;SYMLINK=vendor/lib64/libaal_cust_func.so
+vendor/lib64/mt6835/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so
+vendor/lib64/libaal_cust.so
+vendor/lib64/libaal_key.so
+vendor/lib64/libaal_mtk.so
+
 # Audio
 odm/firmware/sipa.bin
 vendor/lib64/hw/audio.primary.mediatek.so:vendor/lib64/hw/audio.primary.mt6835.so;FIX_SONAME
