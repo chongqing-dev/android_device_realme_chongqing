@@ -19,6 +19,9 @@ ro.netflix.bsp_rev=MTK6835-36999-1
 ro.hardware.gatekeeper=trustonic
 ro.hardware.kmsetkey=trustonic
 
+# GNSS
+ro.vendor.gps.chrdev=gps_drv_stp
+
 # Graphics
 ro.vendor.mtk_aal_support=1
 ro.vendor.display.type=lcd

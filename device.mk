@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
     libgatekeeper.vendor
 
+# GNSS
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.mediatek
