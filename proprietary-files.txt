@@ -565,6 +565,12 @@ vendor/lib64/libhfmanagerwrapper.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 
+# Touchscreen
+vendor/firmware/novatek_ts_fw.bin
+vendor/firmware/novatek_ts_fw_144.bin
+vendor/firmware/novatek_ts_fw_jdi.bin
+vendor/firmware/novatek_ts_fw_tm.bin
+
 # Trusted Execution Environment (TEE)
 vendor/lib/libthha.so;DISABLE_CHECKELF
 vendor/lib64/libthha.so
