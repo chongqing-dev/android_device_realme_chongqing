@@ -21,6 +21,7 @@ from extract_utils.main import (
 namespace_imports = [
     'device/realme/chongqing',
     'hardware/mediatek',
+    'hardware/mediatek/libaedv',
     'hardware/oplus',
 ]
 

@@ -227,6 +227,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/interfaces \
     hardware/mediatek \
+    hardware/mediatek/libaedv \
     hardware/oplus
 
 # USB
