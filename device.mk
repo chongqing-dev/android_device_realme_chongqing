@@ -81,3 +81,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek
+
+# Inherit the proprietary files
+$(call inherit-product, vendor/realme/chongqing/chongqing-vendor.mk)
+ 
