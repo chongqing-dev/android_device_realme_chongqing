@@ -329,7 +329,6 @@ vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustoni
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
 vendor/lib64/libkmsetkey.so
 vendor/lib64/libdecrypt.so
-vendor/lib64/libsysenv.so
 
 # MMS
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.7-service
