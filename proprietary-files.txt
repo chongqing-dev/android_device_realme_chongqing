@@ -1,6 +1,20 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
 ## are from RMX3780 AP3A.240617.008.
 
+vendor/lib64/libcwb_mtk.so
+vendor/lib64/libjpeg-alpha-oal_vendor.so
+vendor/lib64/libjpeg-alpha_vendor.so
+vendor/lib64/libJpgEncPipe.so
+odm/lib64/lib-virtual-modem-protos.so
+vendor/lib64/vendor.oplus.hardware.display.MixLut3D-V1-ndk_platform.so
+odm/lib64/libdmtp-protos-lite.so
+vendor/lib64/libladder.so
+odm/lib64/vendor.oplus.hardware.appradio@1.0.so
+odm/lib64/libcommcenterutils.so
+odm/lib64/libcommcenterfw.so
+odm/lib64/libdmtpclient.so
+
+
 # AAL
 vendor/lib64/mt6835/libaal_cust_func.so;SYMLINK=vendor/lib64/libaal_cust_func.so
 vendor/lib64/mt6835/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so

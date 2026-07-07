@@ -36,6 +36,13 @@ lib_fixups: lib_fixups_user_type = {
 
 
 blob_fixups: blob_fixups_user_type = {
+'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
+        .add_needed('libprocessgroup_shim.so'),
+    'system_ext/lib64/libarmnn_ndk.mtk.so': blob_fixup()
+        .add_needed('liblog.so'),
+    'vendor/lib64/librilfusion.so': blob_fixup()
+        .replace_needed(
+            'vendor.oplus.hardware.communicationcenter-V1-ndk.so', 'vendor.oplus.hardware.communicationcenter-V2-ndk.so'),
     'vendor/bin/hw/android.hardware.security.keymint@2.0-service.trustonic': blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     'system_ext/lib64/libsink.so': blob_fixup()
@@ -60,12 +67,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libcodec2_vpp_AISR_plugin.so'
     ): blob_fixup()
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
-        .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V7-ndk.so')
-        .replace_needed('libcodec2_soft_common.so', 'libcodec2_soft_common-v33.so')
-        .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v33.so')
-        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so')
-        .replace_needed('libsfplugin_ccodec_utils.so', 'libsfplugin_ccodec_utils-v33.so')
-        .replace_needed('libui.so', 'libui-v34.so'),
+        .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     'vendor/lib64/libsfplugin_ccodec_utils-v33.so': blob_fixup()
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v33.so')
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
