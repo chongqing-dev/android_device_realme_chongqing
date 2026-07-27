@@ -76,12 +76,12 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/realme/kernel-5.15
 TARGET_KERNEL_CLANG_VERSION := r450784e
-TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
+TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_KERNEL_CONFIG := \
 	gki_defconfig \
 	vendor/mgk_64_k515.config \
-    vendor/entry_level.config \
-	vendor/oplus6835.config
+    kernel/entry_level.config \
+	kernel/oplus6835.config
 
 # Kernel DTB / DTBO
 TARGET_NEEDS_DTBOIMAGE := true
@@ -158,7 +158,7 @@ BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
 
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
-BOARD_SUPER_PARTITION_SIZE := 10737418240
+BOARD_SUPER_PARTITION_SIZE := 9663676416
 BOARD_SUPER_PARTITION_GROUPS := oplus_dynamic_partitions
 BOARD_OPLUS_DYNAMIC_PARTITIONS_PARTITION_LIST := system product system_ext vendor odm system_dlkm vendor_dlkm odm_dlkm
 BOARD_OPLUS_DYNAMIC_PARTITIONS_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) - 4194304)
@@ -213,7 +213,7 @@ VENDOR_SECURITY_PATCH := 2025-02-01
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 include hardware/oplus/sepolicy/mtk/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
-# BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
