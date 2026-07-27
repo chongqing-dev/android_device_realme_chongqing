@@ -14,22 +14,18 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from chongqing device
 $(call inherit-product, device/realme/chongqing/device.mk)
 
-PRODUCT_DEVICE := chongqing
 PRODUCT_NAME := lineage_chongqing
-PRODUCT_BRAND := realme
-PRODUCT_MODEL := RMX3783
+PRODUCT_DEVICE := chongqing
 PRODUCT_MANUFACTURER := realme
-PRODUCT_RELEASE_NAME := realme V50
-
-PRODUCT_SYSTEM_NAME := RMX3783
-PRODUCT_SYSTEM_DEVICE := RE5C34
+PRODUCT_BRAND := realme
+PRODUCT_MODEL := RMX3780
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="RMX3783-user 14 UKQ1.230924.001 T.R4T2.1c3c359-7ad2-7ad3 release-keys" \
-    BuildFingerprint=realme/RMX3783/RE5C34:14/UKQ1.230924.001/T.R4T2.1c3c359-7ad2-7ad3:user/release-keys \
-    SystemModel=$(PRODUCT_SYSTEM_DEVICE) \
-    SystemName=$(PRODUCT_SYSTEM_NAME) \
-    ProductModel=$(PRODUCT_SYSTEM_DEVICE) \
-    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+    BuildDesc="RMX3780EEA-user 14 UKQ1.230924.001 T.R4T2.1c3c35a-7ad3-7ad4 release-keys" \
+    BuildFingerprint=realme/RMX3780EEA/RE5C6CL1:14/UKQ1.230924.001/T.R4T2.1c3c35a-7ad3-7ad4:user/release-keys \
+    DeviceName=RE5C6CL1 \
+    DeviceProduct=RMX3780 \
+    SystemDevice=RE5C6CL1 \
+    SystemName=RMX3780

@@ -1,27 +1,13 @@
-# Unpinned blobs from RMX3783-user 14 UKQ1.230924.001 T.R4T2.1c3c359-7ad2-7ad3 release-keys
+# Unpinned blobs from RMX3780EEA-user 14 UKQ1.230924.001 T.R4T2.1c3c35a-7ad3-7ad4 release-keys
+
 
 # AEE
-vendor/bin/aee_aedv64_v2
-vendor/bin/aee_dumpstatev_v2
-vendor/bin/aeev_v2
-vendor/bin/dconfig
-vendor/bin/hw/vendor.mediatek.hardware.aee@1.1-service
-vendor/etc/aee-commit
-vendor/etc/aee-config
-vendor/etc/init/aee_aedv64_v2.rc
-vendor/etc/init/hw/init.aee.rc
-vendor/etc/init/vendor.mediatek.hardware.aee@1.1-service.rc
 vendor/lib/libaedv.so
 vendor/lib/libladder.so
 vendor/lib64/libaedv.so
 vendor/lib64/libladder.so
-vendor/lib64/vendor.mediatek.hardware.aee@1.0.so
-vendor/lib64/vendor.mediatek.hardware.aee@1.1.so
 
 # Audio
-odm/lib/liboppo_audiox.so
-odm/lib64/liboppo_audiox.so
-odm/bin/AudioTest
 vendor/etc/mtk_vext_info
 vendor/bin/smartpa_nvtest
 vendor/bin/mt6660_calibration
@@ -110,6 +96,8 @@ vendor/lib/libaudioprimarydevicehalifclient.so
 vendor/lib/libaudiosmartpamtk.so
 vendor/lib/libaurisysdemo.so
 vendor/lib/libbessound_hd_mtk_vendor.so
+vendor/lib/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
 
 # Audio (Aurisys)
 odm/etc/audio/aurisys_config/audio_power_aurisys_config.xml
@@ -123,8 +111,6 @@ odm/etc/audio/audio_device/audio_power_device.xml
 odm/etc/audio/audio_device/common/audio_device.xml
 
 # Audio (FX Modules)
-odm/lib/soundfx/liboppo_audiox_sw_effects.so
-odm/lib64/soundfx/liboppo_audiox_sw_effects.so
 vendor/lib/soundfx/libspatializer.so
 vendor/lib64/soundfx/libspatializer.so
 
@@ -422,48 +408,19 @@ vendor/etc/AudioLog_dynamic.xml
 odm/firmware/sipa.bin
 
 # Bluetooth
-odm/bin/init.oplus.btChangePermission.sh
-vendor/bin/autobt
-vendor/bin/bt_dump
-vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
-vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/etc/init/init.bt_drv.rc
-vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
-vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
-vendor/lib64/hw/android.hardware.bluetooth.audio@2.1-impl.so
-vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so
-vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
-vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
-vendor/lib64/libbluetooth_audio_session_aidl_mediatek.so
-vendor/lib64/libbluetooth_audio_session_mediatek.so
-vendor/lib64/libbluetooth_hw_test.so
-vendor/lib64/libbluetooth_mtk.so
-vendor/lib64/libbluetooth_mtk_pure.so
-vendor/lib64/libbluetooth_relayer.so
-vendor/lib64/libbluetoothem_mtk.so
-vendor/lib/libbluetooth_audio_session_aidl_mediatek.so
-vendor/lib/libbluetooth_audio_session_mediatek.so
-vendor/lib/libbluetoothem_mtk.so
-vendor/lib/libbluetooth_hw_test.so
-vendor/lib/libbluetooth_mtk.so
 vendor/lib/libbluetooth_mtk_pure.so
-vendor/lib/libbluetooth_relayer.so
-vendor/lib64/libbt-vendor.so
+vendor/lib/libbluetooth_mtk.so
 vendor/lib/libbt-vendor.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-impl.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
-vendor/lib/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
-vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
+vendor/lib64/libbluetooth_mtk_pure.so
+vendor/lib64/libbluetooth_mtk.so
+vendor/lib64/libbt-vendor.so
 
 # Bluetooth Firmware
 vendor/firmware/BT_FW.cfg
 
 # Camera
+vendor/etc/vintf/manifest/manifest_cameraproviderhidl.xml
 odm/bin/hw/vendor.oplus.hardware.cammidasservice-V1-service
 vendor/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk.so;MODULE_SUFFIX=_vendor
 odm/lib64/libskhynix_q2b_shared.so
@@ -494,14 +451,10 @@ odm/etc/camera/CameraHWConfiguration.config
 odm/etc/camera/cfr_bin/CFR_OPlus_EF017_UW_snapshot.bin
 odm/etc/camera/config/camera_unit_config
 odm/etc/camera/config/camera_unit_feature_config.protobuf
-odm/etc/camera/config/hi1336
 odm/etc/camera/config/oplus_camera_algo_switch_config
 odm/etc/camera/config/oplus_camera_aps_config
 odm/etc/camera/config/oplus_camera_config
 odm/etc/camera/config/oplus_preview_decision_params.json
-odm/etc/camera/config/ov02b1b
-odm/etc/camera/config/ov08d10
-odm/etc/camera/config/video_beauty_default_config
 odm/etc/camera/dualcal_golden.bin
 odm/etc/camera/facesr_hd_composite_ff_ref_lite_4.1.4_mtkg57_ppl3_ocl_block.model
 odm/etc/camera/fb_default
@@ -1048,8 +1001,6 @@ odm/lib64/libop-ai-beauty-body-detection.so
 odm/lib64/libop-ai-beauty-faceretouch-cn.so
 odm/lib64/liboplus_platform_hwi.so
 odm/lib/liboplus_platform_hwi.so
-odm/lib/libormshalclient.so
-odm/lib64/libormshalclient.so
 odm/lib64/libPerfectlyClearCrux.so
 odm/lib/libPerfectlyClearCruxOpt.so
 odm/lib64/libPerfectlyClearCruxOpt.so
@@ -1064,8 +1015,6 @@ odm/lib64/libVDPostureDetection.so
 odm/lib64/libVDSuperPhotoAPI.so;FIX_SONAME
 odm/lib64/libVDUpScale.so
 odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk.so
-odm/lib/vendor.oplus.hardware.orms@1.0.so
-odm/lib64/vendor.oplus.hardware.orms@1.0.so
 vendor/bin/hw/mt6835/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
 vendor/bin/mt6835/jpegtool;SYMLINK=vendor/bin/jpegtool
 vendor/bin/mtkconverter
@@ -1493,27 +1442,6 @@ vendor/lib/libJpgEncPipe.so
 vendor/lib/libminiui.so
 vendor/lib/libpixelflinger.so
 vendor/lib/libSQLiteModule_VER_ALL.so
-vendor/lib/libstagefright_soft_aacdec.so
-vendor/lib/libstagefright_soft_aacenc.so
-vendor/lib/libstagefright_soft_amrdec.so
-vendor/lib/libstagefright_soft_amrnbenc.so
-vendor/lib/libstagefright_soft_amrwbenc.so
-vendor/lib/libstagefright_soft_avcdec.so
-vendor/lib/libstagefright_soft_avcenc.so
-vendor/lib/libstagefright_soft_flacdec.so
-vendor/lib/libstagefright_soft_flacenc.so
-vendor/lib/libstagefright_soft_g711dec.so
-vendor/lib/libstagefright_soft_gsmdec.so
-vendor/lib/libstagefright_soft_hevcdec.so
-vendor/lib/libstagefright_soft_mp3dec.so
-vendor/lib/libstagefright_soft_mpeg2dec.so
-vendor/lib/libstagefright_soft_mpeg4dec.so
-vendor/lib/libstagefright_soft_mpeg4enc.so
-vendor/lib/libstagefright_soft_opusdec.so
-vendor/lib/libstagefright_soft_rawdec.so
-vendor/lib/libstagefright_soft_vorbisdec.so
-vendor/lib/libstagefright_soft_vpxdec.so
-vendor/lib/libstagefright_soft_vpxenc.so
 vendor/lib/mt6835/arm.graphics-V2-ndk.so;SYMLINK=vendor/lib/arm.graphics-V2-ndk.so
 vendor/lib/mt6835/arm.graphics-V3-ndk.so;SYMLINK=vendor/lib/arm.graphics-V3-ndk.so
 vendor/lib/mt6835/hi1336_mipi_raw_chongqing_IdxMgr.so;SYMLINK=vendor/lib/hi1336_mipi_raw_chongqing_IdxMgr.so
@@ -2335,11 +2263,9 @@ vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 vendor/lib64/vendor.oplus.hardware.cameraextension-V1-ndk_platform.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so
-vendor/lib64/vendor.oplus.hardware.commondcs-V1-ndk_platform.so
 
 # Camera (OCCE)
 odm/bin/occe_create
-odm/etc/init/occe_create.rc
 odm/lib64/libcreatebin.so
 odm/lib64/libsaveshaderbin.so
 
@@ -2356,6 +2282,11 @@ vendor/etc/init/chipinfo_init.rc
 vendor/bin/conninfra_loader
 
 # Display
+odm/lib/vendor.oplus.hardware.displaypanelfeature@1.0.so
+odm/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
+odm/bin/hw/vendor.oplus.hardware.displaypanelfeature@1.0-service
+odm/etc/init/vendor.oplus.hardware.displaypanelfeature@1.0-service.rc
+odm/etc/vintf/manifest/manifest_oplus_displaypanelfeature.xml
 vendor/bin/hw/android.hardware.graphics.composer@3.1-service
 vendor/etc/init/android.hardware.graphics.composer@3.1-service.rc
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
@@ -2414,8 +2345,6 @@ vendor/bin/hw/vendor.mediatek.hardware.mmlpq@V1-service
 vendor/etc/cust_pq.xml
 system_ext/lib/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
 system_ext/lib/vendor.mediatek.hardware.pq_aidl-V2-ndk.so.hbtf
-system_ext/lib64/libPQDCjni.so
-system_ext/lib64/libPQjni.so
 system_ext/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
 vendor/bin/hw/vendor.mediatek.hardware.pq_aidl-service
 vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc
@@ -2538,6 +2467,20 @@ vendor/firmware/soc_fm_v1_patch.bin
 # FMRadio
 vendor/etc/init/init.fmradio_drv.rc
 
+# Fingerprint
+odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff
+odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
+odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
+
+# Fingerprint Pay
+odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service
+odm/etc/init/vendor.oplus.hardware.biometrics.fingerprintpay@1.0-service.rc
+odm/etc/vintf/manifest/manifest_oplus_ifaa.xml
+odm/lib/librpmbengclient.so
+odm/lib/libsecurity_event_dcs_vnd.so
+odm/lib64/librpmbengclient.so
+odm/lib64/libsecurity_event_dcs_vnd.so
+
 # Gatekeeper
 vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.trustonic.so
 vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
@@ -2635,6 +2578,12 @@ vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libNoFpsActor.so
 
+# Health
+vendor/bin/fuelgauged
+vendor/lib/libfgauge_gm30.so
+vendor/lib64/libfgauge_gm30.so
+vendor/bin/fuelgauged_nvram
+
 # IMS
 system_ext/bin/vtservice
 system_ext/etc/init/init.vtservice.rc
@@ -2662,7 +2611,6 @@ system_ext/lib64/libvcodec_capenc.so
 system_ext/lib64/libvt_avsync.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
-system_ext/priv-app/ImsService/ImsService.apk
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
 vendor/bin/hw/vtservice_hidl
 vendor/bin/ipsec_mon
@@ -2695,7 +2643,7 @@ vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
 
-# Keymaster
+# Keymint
 #vendor/bin/meta_tst
 vendor/bin/hw/android.hardware.security.keymint@2.0-service.trustonic
 vendor/etc/init/android.hardware.security.keymint@2.0-service.trustonic.rc
@@ -2707,6 +2655,7 @@ vendor/lib/libdecrypt.so
 vendor/lib64/libkmsetkey.so
 vendor/lib64/libsysenv.so
 vendor/lib/libsysenv.so
+vendor/etc/permissions/android.hardware.hardware_keystore.xml:vendor/etc/permissions/android.hardware.hardware_keystore.trustonic-keymint.xml
 
 # MD Monitor
 vendor/etc/init/md_monitor.rc
@@ -3014,10 +2963,100 @@ vendor/lib64/libnwk_opt_halwrap_vendor.so
 vendor/lib64/vendor.mediatek.hardware.nwk_opt@1.0.so
 vendor/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
 
+# NFC
+odm/bin/hw/vendor.oplus.hardware.felica@1.0-service
+odm/bin/hw/vendor.oplus.hardware.nfc_aidl-service
+odm/bin/hw/vendor.oplus.hardware.nfcExtns-service
+odm/bin/opnscr
+odm/bin/opnscr_aidl
+odm/etc/init/init.pn8x.nfc.rc
+odm/etc/nfc/libnfc_accesscard_config.conf_23661
+odm/etc/nfc/libnfc_accesscard_config.conf_23671
+odm/etc/nfc/libnfc_accesscard_index0_config.conf_23661
+odm/etc/nfc/libnfc_accesscard_index0_config.conf_23671
+odm/etc/nfc/libnfc_accesscard_index1_config.conf_23661
+odm/etc/nfc/libnfc_accesscard_index1_config.conf_23671
+odm/etc/nfc/libnfc_accesscard_index2_config.conf_23661
+odm/etc/nfc/libnfc_accesscard_index2_config.conf_23671
+odm/etc/nfc/libnfc_accesscard_index3_config.conf_23661
+odm/etc/nfc/libnfc_accesscard_index3_config.conf_23671
+odm/etc/nfc/libnfc_accesscard_index4_config.conf_23661
+odm/etc/nfc/libnfc_accesscard_index4_config.conf_23671
+odm/etc/nfc/libnfc_accesscard_index5_config.conf_23661
+odm/etc/nfc/libnfc_accesscard_index5_config.conf_23671
+odm/etc/nfc/libnfc_default_config.conf_23661
+odm/etc/nfc/libnfc_default_config.conf_23671
+odm/etc/nfc/libnfc-nci.conf_23661
+odm/etc/nfc/libnfc-nci.conf_23671
+odm/etc/nfc/libnfc-nxp_RF.conf_23661
+odm/etc/nfc/libnfc-nxp_RF.conf_23671
+odm/etc/nfc/libnfc-nxp.conf_23661
+odm/etc/nfc/libnfc-nxp.conf_23671
+odm/etc/nfc/nfc_conf_ref
+odm/etc/nfc/nfc_fw_ref
+odm/etc/nfc/pnscr/libnfc-nxp-pnscr.conf
+odm/etc/nfc/pnscr/sn100u_pnx_current.pnscr
+odm/etc/nfc/pnscr/sn100u_pnx_ese_3.pnscr
+odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_53
+odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_57
+odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_60
+odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_65
+odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_66
+odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_68
+odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_23
+odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_2B
+odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_30
+odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_33
+odm/etc/nfc/st21nfc_fw.bin_st21h
+odm/etc/nfc/st21nfc_fw7.bin_st21h
+odm/lib/ese_client.so
+odm/lib/ese_spi_nxp_nq330.so
+odm/lib/hal_libnfc.so
+odm/lib/libpn553_fw.so
+odm/lib/libpn557_fw.so
+odm/lib/libpnscr2_aidl.so
+odm/lib/libpnscr2.so
+odm/lib/libsn100u_fw.so
+odm/lib/libsn220u_fw.so
+odm/lib/nfc_nci.pn54x.default.so
+odm/lib/vendor.nxp.eventprocessor@1.0.so
+odm/lib/vendor.nxpnq330.nxpese@1.0.so
+odm/lib/vendor.oplus.hardware.felica@1.0-impl.so
+odm/lib/vendor.oplus.hardware.felica@1.0.so
+odm/lib/vendor.oplus.hardware.nfc_aidl-V2-ndk.so
+odm/lib/vendor.oplus.hardware.nfcExtns-V1-ndk.so
+odm/lib64/ese_client.so
+odm/lib64/ese_spi_nxp_nq330.so
+odm/lib64/hal_libnfc.so
+odm/lib64/libpnscr2_aidl.so
+odm/lib64/libpnscr2.so
+odm/lib64/nfc_nci.pn54x.default.so
+odm/lib64/vendor.nxp.eventprocessor@1.0.so
+odm/lib64/vendor.nxpnq330.nxpese@1.0.so
+odm/lib64/vendor.oplus.hardware.felica@1.0-impl.so
+odm/lib64/vendor.oplus.hardware.felica@1.0.so
+odm/lib64/vendor.oplus.hardware.nfc_aidl-V2-ndk.so
+odm/lib64/vendor.oplus.hardware.nfcExtns-V1-ndk.so
+vendor/lib/libnxp_extamp_intf.so
+vendor/lib64/libnxp_extamp_intf.so
+
 # OPLUS Log Core
 odm/bin/oldc_vnd
 odm/lib/libolc_vnd.so
 odm/lib64/libolc_vnd.so
+odm/lib/vendor.oplus.hardware.olc2-V1-ndk.so
+odm/lib64/vendor.oplus.hardware.olc2-V1-ndk.so
+odm/lib/vendor.oplus.hardware.olc2-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.olc2-V1-ndk_platform.so
+
+# OPLUS Charger
+odm/bin/hw/vendor.oplus.hardware.charger-V3-service
+odm/bin/hw/wlschgd
+odm/etc/init/vendor.oplus.hardware.charger-V3-service.rc
+odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
+odm/firmware/fastchg/charging_thermal_config_default.txt 
+odm/lib/vendor.oplus.hardware.charger@1.0.so
+odm/lib64/vendor.oplus.hardware.charger@1.0.so
 
 # Osense
 odm/lib/libosenseaidlhalclient.so
@@ -3026,21 +3065,82 @@ odm/lib64/libosenseaidlhalclient.so
 odm/lib64/libosensehalclient.so
 odm/lib64/vendor.oplus.hardware.osense.client@1.0.so
 odm/lib/vendor.oplus.hardware.osense.client@1.0.so
-vendor/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so
+
+# ORMS
+odm/bin/hw/vendor.oplus.hardware.ormsHalService-aidl-service
+odm/etc/init/ormsHalService-default.rc
+odm/etc/vintf/manifest/ormsHalService-default.xml
+odm/lib/libormshalclient.so
+odm/lib/vendor.oplus.hardware.orms@1.0.so
+odm/lib/vendor.oplus.hardware.ormsHalService-V1-ndk.so
+odm/lib64/libormshalclient.so
+odm/lib64/vendor.oplus.hardware.orms@1.0.so
+odm/lib64/vendor.oplus.hardware.ormsHalService-V1-ndk.so
+
+# Perf (Oplus)
+odm/lib64/liboplus-uah-client.so
+odm/bin/hw/vendor-oplus-hardware-performance-V1-service
+odm/etc/init/vendor-oplus-hardware-performance-V1-service.rc
+odm/etc/vintf/manifest/manifest_performance_aidl.xml
+vendor/lib/vendor.oplus.hardware.performance-V1-ndk.so
+vendor/lib64/vendor.oplus.hardware.performance-V1-ndk.so
+
+# URCC
+odm/lib/vendor.oplus.hardware.urcc-V1-ndk.so
+odm/lib64/vendor.oplus.hardware.urcc-V1-ndk.so
+vendor/lib64/vendor.oplus.hardware.urcc-V1-ndk.so;MODULE_SUFFIX=_vendor
+odm/lib/vendor.oplus.hardware.urcc-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.urcc-V1-ndk_platform.so
+odm/bin/hw/vendor.oplus.hardware.urcc-service
+odm/etc/init/vendor.oplus.hardware.urcc-service.rc
+odm/etc/vintf/manifest/vendor.oplus.hardware.urcc-service.xml
 
 # Power
+vendor/lib/libperfctl_vendor.so
+vendor/lib64/libperfctl_vendor.so
+odm/etc/power_profile/power_profile.xml
+odm/etc/powerhal/power_app_cfg.xml
+odm/etc/powerhal/powercontable.xml
+odm/etc/powerhal/powerscntbl.xml
+vendor/etc/command.csv
+vendor/etc/fstb.cfg
+vendor/etc/xgf.cfg
+vendor/etc/default_pd_calibration.bin
+vendor/bin/gbe
+vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
+vendor/etc/gbe.cfg
+vendor/etc/init/bootperf.rc
+vendor/etc/init/gbe.rc
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
+vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
+vendor/etc/power_app_cfg.xml
+vendor/etc/powercontable.xml
+vendor/etc/powerscntbl.xml
+vendor/etc/task_profiles.json
+vendor/lib/hw/power.default.so
+vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
+vendor/lib/libpower_timer.so
+vendor/lib64/android.hardware.power-service-mediatek.so
+vendor/lib64/hw/power.default.so
+vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
+vendor/lib/libmmprofile.so
+vendor/lib64/libmmprofile.so
+vendor/lib64/libmtkperf_client_vendor.so
+vendor/lib64/libpower_timer.so
+vendor/lib/libpowerhal.so
+vendor/lib64/libpowerhal.so
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
-vendor/etc/default_pd_calibration.bin
-vendor/etc/init/bootperf.rc
-
-# Power (PKM)
-vendor/bin/mtk_pkm_service
-vendor/lib/libpkm.so;DISABLE_CHECKELF
-vendor/lib64/libpkm.so;DISABLE_CHECKELF
-vendor/etc/init/mtk_pkm_service.rc
 
 # Radio
+odm/bin/init.subsys.sh
+vendor/etc/init/init.bip_ap.rc
+vendor/etc/init/init.cccifsd.rc
+vendor/etc/init/init.cccimdinit.rc
+vendor/etc/init/init.cccirpcd.rc
+vendor/etc/init/mtkrild.rc
+vendor/etc/init/muxreport.rc
+vendor/etc/init/gsm0710muxd.rc
 vendor/lib64/librcs_interface.so
 vendor/lib64/libipsec_ims_shr.so
 vendor/lib/librcs_interface.so
@@ -3170,13 +3270,13 @@ vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
 vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 
 # Sensors
+vendor/lib/libsensorndkbridge.so:vendor/lib/libsensorndkbridge-v30.so;FIX_SONAME
+vendor/lib64/libsensorndkbridge.so:vendor/lib64/libsensorndkbridge-v30.so;FIX_SONAME
 vendor/etc/elliptic_sensor.xml
 vendor/lib64/libhwm-oplus.so;MODULE_SUFFIX=_vendor
 vendor/lib/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
-vendor/lib/libsensorndkbridge.so:vendor/lib/libsensorndkbridge-v30.so;FIX_SONAME
-vendor/lib64/libsensorndkbridge.so:vendor/lib64/libsensorndkbridge-v30.so;FIX_SONAME
 odm/lib64/vendor.oplus.hardware.oplusSensor-V1-ndk.so
 odm/lib/vendor.oplus.hardware.oplusSensor-V1-ndk.so
 odm/bin/hw/vendor-oplus-hardware-oplusSensor-V1-service
@@ -3215,9 +3315,14 @@ vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Thermal
+vendor/lib/hw/android.hardware.thermal@1.0-impl.so
+vendor/lib/hw/android.hardware.thermal@2.0-impl.so
+vendor/lib64/hw/android.hardware.thermal@1.0-impl.so
+vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 vendor/bin/thermal_core
-odm/firmware/fastchg/charging_thermal_config_default.txt 
 vendor/bin/thermal_intf
+vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc
+vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
 vendor/etc/init/init.thermal_core.rc
 vendor/etc/thermal/disable_skin_control.conf
 vendor/etc/thermal/disable_thermal_temp.conf
@@ -3289,6 +3394,17 @@ odm/firmware/tp/23661/FW_NF_NT36672C_TIANMA_FAE.img
 odm/firmware/tp/23661/FW_NF_NT36672C_TIANMA.img
 odm/firmware/tp/23661/FW_NF_NT36672C_TIANMA_TEST.bin
 odm/firmware/tp/23661/LIMIT_NF_NT36672C_TIANMA.img
+
+# Fido
+odm/bin/hw/vendor.oplus.hardware.fido.fidoca@1.0-service
+odm/etc/init/vendor.oplus.hardware.fido.fidoca@1.0-service.rc
+odm/etc/vintf/manifest/manifest_oplus_fido.xml
+odm/lib/libfido_factory.so
+odm/lib64/libfido_factory.so
+odm/lib/vendor.oplus.hardware.fido.fidoca-V1-ndk.so
+odm/lib64/vendor.oplus.hardware.fido.fidoca-V1-ndk.so
+odm/lib/vendor.oplus.hardware.fido.fido2ca-V1-ndk.so
+odm/lib64/vendor.oplus.hardware.fido.fido2ca-V1-ndk.so
 
 # Trusted Execution Environment
 vendor/lib/libthha.so;DISABLE_CHECKELF
@@ -3494,35 +3610,17 @@ vendor/firmware/WMT_SOC.cfg
 
 # Widevine
 vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml
-odm/lib/liburee_meta_drmkeyinstall.so
-odm/lib64/liburee_meta_drmkeyinstall.so
 vendor/bin/hw/android.hardware.drm-service.widevine
 vendor/etc/init/android.hardware.drm-service.widevine.rc
-vendor/lib/liburee_meta_drmkeyinstall.so;MODULE_SUFFIX=_vendor
+vendor/lib/liburee_meta_drmkeyinstall.so
 vendor/lib/libwvaidl.so
-vendor/lib64/liburee_meta_drmkeyinstall.so;MODULE_SUFFIX=_vendor
+vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvaidl.so
 
 # Wifi
-odm/bin/init.vendor.wifi.autochmod.sh
-odm/bin/iwpriv_vendor
-odm/etc/init/init.vendor.oplus.connectivity.rc
-odm/etc/ueventd.wifi.rc
-odm/etc/vendor_wifi_rus_config.xml
-vendor/bin/ated
-vendor/bin/netdc
-vendor/bin/wifi_dump
-vendor/bin/wifitest
 vendor/bin/wlan_assistant
-vendor/bin/wpa_cli
 vendor/etc/init/init.wlan_drv.rc
+vendor/bin/wmt_loader
+vendor/bin/wmt_launcher
+vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/wlan_assistant.rc
-vendor/etc/throttle.sh
-vendor/etc/wfd_source_capability.csv
-vendor/lib/libwapi.so
-vendor/lib/libwifinvramdata.so
-vendor/lib64/libwapi.so
-vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
-vendor/lib64/libwifical.so
-vendor/lib64/libwifinvram.so
-vendor/lib64/libwifinvramdata.so
