@@ -5,7 +5,7 @@
 #
 
 DEVICE_PATH := device/realme/chongqing
-KERNEL_PATH := device/xiaomi/chongqing-kernel
+KERNEL_PATH := device/realme/chongqing-kernel
 
 # Architecture
 TARGET_ARCH := arm64
