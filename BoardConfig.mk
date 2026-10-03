@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/realme/chongqing
+KERNEL_PATH := device/xiaomi/chongqing-kernel
 
 # Architecture
 TARGET_ARCH := arm64
@@ -72,60 +73,31 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
 # Kernel
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/realme/kernel-5.15
-TARGET_KERNEL_CLANG_VERSION := r450784e
-TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
-TARGET_KERNEL_CONFIG := \
-	gki_defconfig \
-	vendor/mgk_64_k515.config \
-    kernel/entry_level.config \
-	kernel/oplus6835.config
+TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/Image.gz
+PRODUCT_COPY_FILES += \
+    $(TARGET_PREBUILT_KERNEL):kernel
 
-# Kernel DTB / DTBO
-TARGET_NEEDS_DTBOIMAGE := true
-TARGET_KERNEL_DTBO := mediatek/dtbo.img
-TARGET_KERNEL_DTBO_PREFIX := dts/
-TARGET_KERNEL_DTB := \
-    mediatek/mt6835.dtb
+# Kill lineage kernel build task while preserving kernel
+TARGET_NO_KERNEL_OVERRIDE := true
 
-BOARD_KERNEL_IMAGE_NAME := Image.lz4
+# Workaround to make lineage's soong generator work
+TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
 
-# Kernel Modules
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/modules.load.vendor))
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/modules.load.recovery))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/modules.load.vendor_ramdisk))
+# Board Info
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+
+# DTB/DTBO
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
+BOARD_MKBOOTIMG_ARGS += --dtb $(BOARD_PREBUILT_DTBIMAGE_DIR)/mt6835.dtb
+
+# Kernel modules
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/vendor/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules.load.vendor))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/vendor_ramdisk/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules.load.vendor_ramdisk))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules.load.recovery))
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD) $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
-
-TARGET_KERNEL_EXT_MODULE_ROOT := kernel/realme/vendor
-TARGET_KERNEL_EXT_MODULES := \
-    mediatek/kernel_modules/connectivity/bt/mt66xx/wmt \
-    mediatek/kernel_modules/connectivity/common \
-    mediatek/kernel_modules/connectivity/connfem \
-    mediatek/kernel_modules/connectivity/fmradio \
-    mediatek/kernel_modules/connectivity/gps/gps_pwr \
-    mediatek/kernel_modules/connectivity/gps/gps_stp \
-    mediatek/kernel_modules/connectivity/wlan/adaptor \
-    mediatek/kernel_modules/connectivity/wlan/core/gen4m \
-    mediatek/kernel_modules/fpsgo_cus \
-    mediatek/kernel_modules/met_drv_v3 \
-    mediatek/kernel_modules/gpu \
-    oplus/kernel/cpu/game_opt \
-    oplus/kernel/explorer \
-    oplus/kernel/hans \
-    oplus/kernel/mm/memleak_detect \
-    oplus/kernel/network/data_module \
-    oplus/kernel/network/oplus_apps_monitor \
-    oplus/kernel/network/oplus_dns_hook \
-    oplus/kernel/network/oplus_game_first \
-    oplus/kernel/network/oplus_qr_scan \
-    oplus/kernel/network/oplus_score \
-    oplus/kernel/network/oplus_stats_calc \
-    oplus/kernel/secureguard/gki2.0/rootguard \
-    oplus/kernel/wifi/oplus_connectivity_routerboost \
-    oplus/kernel/wifi/oplus_connectivity_sla \
-    oplus/kernel/wifi/oplus_wificapcenter
 
 # Partitions
 AB_OTA_UPDATER := true
